@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>GitHub Finder</title>
+    <title>GitHub User Finder</title>
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-primary mb-3">
+    <nav class="navbar navbar-dark bg-dark mb-4">
         <div class="container">
-            <a href="#" class="navbar-brand">GitHub Finder</a>
+            <h3 class="navbar-brand">GitHub User Finder</h3>
         </div>
     </nav>
     <div class="container searchContainer">
-        <div class="search card card-body">
-            <h1>Search Users on Github</h1>
-            <p>Enter a Github username </p>
-            <input type="text" id="gitUsername" class="form-control" placeholder="GitHub Username" onkeyup="fetchData()" />
+        <div class="search card card-body mb-3">
+            <input type="text" id="gitUsername" class="form-control" placeholder="Enter a Github Username"
+                onkeyup="fetchData()" />
         </div>
-        <br />
-        <div id="profile"></div>
+        <div id="user-alert"></div>
+        <div id="userprofile" class="mb-5"></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -32,8 +32,8 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="./scripts/keys.js"></script>
-    <script src="./scripts/github.js"></script>
-    <script src="./scripts/ui.js"></script>
+    <script src="./scripts/git.js"></script>
+    <script src="./scripts/display.js"></script>
     <script src="./scripts/main.js"></script>
 </body>
 
