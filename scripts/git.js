@@ -13,8 +13,6 @@ class Github {
 
     const profile = await userProfile.json();
     const repos = await userRepo.json();
-    console.dir(profile)
-    console.dir(repos)
 
     return {
       profile,
