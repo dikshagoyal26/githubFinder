@@ -4,7 +4,6 @@ window.addEventListener('load', () => {
   github = new Github();
   display = new Display();
   gitUsername.addEventListener("keyup", getData());
-
 })
 
 function getData() {
@@ -12,13 +11,17 @@ function getData() {
   if (githubid !== "") {
     github.getUserData(githubid).then((data) => {
       if (data.profile.message === "Not Found") {
-        display.showAlert("User not found", "alert alert-danger");
+        display.showAlert("User not found");
       } else {
+        display.clearAlert();
         display.showProfile(data.profile);
-        display.showRepos(data.repos);
+        let count = data.profile.public_repos > 10 ? 10 : data.profile.public_repos
+        if (count > 0)
+          display.showRepos(data.repos, count);
       }
     });
   } else {
+    display.clearAlert();
     display.clearProfile();
   }
 }

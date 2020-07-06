@@ -17,11 +17,11 @@
         </div>
     </nav>
     <div class="container searchContainer">
-        <div class="search card card-body mb-3">
+        <div class="search mb-3">
             <input type="text" id="gitUsername" class="form-control" placeholder="Enter a Github Username"
                 onkeyup="fetchData()" />
         </div>
-        <div id="user-alert"></div>
+        <div id="user-alert" class="alert alert-danger"></div>
         <div id="userprofile" class="mb-5"></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -32,6 +32,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="./scripts/keys.js"></script>
+    <script src="./scripts/urls.js"></script>
     <script src="./scripts/git.js"></script>
     <script src="./scripts/display.js"></script>
     <script src="./scripts/main.js"></script>

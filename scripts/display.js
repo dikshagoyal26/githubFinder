@@ -42,10 +42,12 @@ class Display {
           </div>
             <div id="repositories"></div>
           `;
+    // if (user.public_repos > 10)
+    //   content += `<button>More Repos</button>`
     this.profile.innerHTML = content;
   }
-  showRepos(repos) {
-    let output = `<h3 class="page-heading mb-3">10 Latest Repositories</h3>`;
+  showRepos(repos, count) {
+    let output = `<h3 class="page-heading mb-3">${count} Latest Repositories</h3>`;
     repos.forEach(function (repo) {
       output += `
         <div class="card card-body mb-2">
@@ -70,18 +72,14 @@ class Display {
     this.profile.innerHTML = "";
   }
 
-  showAlert(message, className) {
+  showAlert(message) {
     this.clearAlert();
     const alert = document.querySelector("#user-alert")
-    alert.className = className;
     alert.appendChild(document.createTextNode(message));
     alert.style.display = "block"
     // const container = document.querySelector(".searchContainer");
     // const search = document.querySelector(".search");
     // container.insertBefore(div, search);
-    setTimeout(() => {
-      this.clearAlert();
-    }, 1000);
   }
 
   clearAlert() {

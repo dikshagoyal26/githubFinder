@@ -22,3 +22,6 @@ img {
   font-size: 16px;
   margin-right: 0.5rem;
 }
+#user-alert{
+  display: none;
+}
