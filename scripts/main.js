@@ -15,9 +15,7 @@ function getData() {
       } else {
         display.clearAlert();
         display.showProfile(data.profile);
-        let count = data.profile.public_repos > 10 ? 10 : data.profile.public_repos
-        if (count > 0)
-          display.showRepos(data.repos, count);
+        display.showRepos(data.repos);
       }
     });
   } else {
