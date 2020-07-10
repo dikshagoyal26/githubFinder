@@ -20,6 +20,8 @@ class Github {
     const userRepo = await fetch(githubUrl + `${user}/repos?per_page=${profile.public_repos}&sort=${this.repos_sort}`, this.headers)
 
     const repos = await userRepo.json();
+    console.log({ profile, repos })
+    // profile.bio
     return {
       profile,
       repos,

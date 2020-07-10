@@ -15,13 +15,17 @@ function getData() {
       } else {
         display.clearAlert();
         display.showProfile(data.profile);
-        display.showRepos(data.repos);
+        display.showRepos(data.profile.login, data.repos ? data.repos.length > 10 ? data.repos.slice(0, 10) : data.repos : []);
       }
     });
   } else {
     display.clearAlert();
     display.clearProfile();
   }
+}
+
+function viewProfile(url) {
+  window.open(url, '_blank');
 }
 
 const debounce = function (delay) {
