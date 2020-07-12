@@ -95,3 +95,23 @@ img {
   color: #586069 !important;
   font-size: 14px;
 }
+.details-card {
+  margin-top: 16px !important;
+  list-style: none;
+  padding: 0;
+}
+.fa {
+  color: #6a737d;
+  font-size: 18px;
+  margin-right: 3px;
+  width: 16px;
+  text-align: right;
+}
+.bio {
+  font-size: 16px;
+}
+.norepo {
+  display: block;
+  font-weight: 600;
+  text-align: center;
+}
